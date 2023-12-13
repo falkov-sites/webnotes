@@ -19,9 +19,9 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          port: ${{ secrets.SERVER_PORT }}
+
           rm: true
           source: "./*"
           # target: "public_html/falkov.site/webnotes"
-          target: ""
+          target: "/home/f59436/public_html/falkov.site/webnotes"
 
