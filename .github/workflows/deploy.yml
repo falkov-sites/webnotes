@@ -15,7 +15,7 @@ jobs:
       - name: Copy files to ftp 1
         uses: airvzxf/ftp-deployment-action@latest
         with:
-          server: ftp.f59436.hostus01.fornex.host
-          user: ftp_fornex@falkov.site
-          password: 12Gamer1955_ftp
-          remote_dir: "./webnotes"
+          server: ${{ secrets.FORNEX_FTP_SERVER }}
+          user: ${{ secrets.FORNEX_FTP_USER }}
+          password: ${{ secrets.FORNEX_FTP_PSW }}
+          remote_dir: ${{ secrets.FORNEX_FTP_DIR }}
