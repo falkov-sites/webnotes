@@ -19,3 +19,4 @@ jobs:
           user: ${{ secrets.FORNEX_FTP_USER }}
           password: ${{ secrets.FORNEX_FTP_PSW }}
           remote_dir: ${{ secrets.FORNEX_FTP_DIR }}
+          delete: "true"  # delete all files in remote directory before upload
