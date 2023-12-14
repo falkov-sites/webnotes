@@ -18,4 +18,4 @@ jobs:
           server: ftp.f59436.hostus01.fornex.host
           user: ftp_fornex@falkov.site
           password: 12Gamer1955_ftp
-          local_dir: /Volumes/ssd_sata/_develop/_projects/falkov.site/webnotes
+          local_dir: "./*"
