@@ -19,11 +19,11 @@ jobs:
           # password: ${{ secrets.SERVER_PASSWORD }}
           # port: ${{ secrets.SERVER_PORT }}
 
-          host: ftp.f59436.hostus01.fornex.host
-          username: ftp_fornex@falkov.site
-          password: 12Gamer1955_ftp
-          port: 21
-          rm: true
-          source: "./*"
+          ftp-server: ftp://ftp.f59436.hostus01.fornex.host:21/public_html
+          ftp-username: ftp_fornex@falkov.site
+          ftp-password: 12Gamer1955_ftp
+          # port: 21
+          # rm: true
+          # source: "./*"
           # target: "public_html/falkov.site/webnotes"
           # target: "/home/f59436/public_html/falkov.site/webnotes"
