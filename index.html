@@ -1,652 +1,792 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png" />
+    <link rel="manifest" href="./favicons/site.webmanifest" />
+    <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
-  <link rel="manifest" href="./favicons/site.webmanifest">
-  <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#00aba9">
-  <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./lib/jquery-3.6.0.min.js"></script>
+    <script defer src="./js/script.js"></script>
 
-  <link rel="stylesheet" href="./css/style.css" />
-  <script defer src="./lib/jquery-3.6.0.min.js"></script>
-  <script defer src="./js/script.js"></script>
+    <title>Web Notes</title>
+  </head>
 
-  <title>Web Notes</title>
-</head>
-
-<body>
-  <div class="links-row">
-    <!-- <div class="links-row__group"> -->
-    <div class="fold-unfold">
-      <button class="btn-unfold">
-        <svg width="556" height="531" viewBox="0 0 556 531" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line class="svg-line" x1="56.5685" y1="40" x2="278" y2="261.431" stroke="black" stroke-width="80"
-            stroke-linecap="round" />
-          <line class="svg-line" x1="278" y1="261.431" x2="499.431" y2="40" stroke="black" stroke-width="80"
-            stroke-linecap="round" />
-          <line class="svg-line" x1="56.5685" y1="253" x2="278" y2="474.431" stroke="black" stroke-width="80"
-            stroke-linecap="round" />
-          <line class="svg-line" x1="278" y1="474.431" x2="499.431" y2="253" stroke="black" stroke-width="80"
-            stroke-linecap="round" />
-        </svg>
-      </button>
-      <button class="btn-fold">
-        <svg width="556" height="531" viewBox="0 0 556 531" xmlns="http://www.w3.org/2000/svg">
-          <line class="svg-line" x1="56.5685" y1="40" x2="278" y2="261.431" stroke="black" stroke-width="80"
-            stroke-linecap="round" />
-          <line class="svg-line" x1="278" y1="261.431" x2="499.431" y2="40" stroke="black" stroke-width="80"
-            stroke-linecap="round" />
-          <line class="svg-line" x1="56.5685" y1="253" x2="278" y2="474.431" stroke="black" stroke-width="80"
-            stroke-linecap="round" />
-          <line class="svg-line" x1="278" y1="474.431" x2="499.431" y2="253" stroke="black" stroke-width="80"
-            stroke-linecap="round" />
-        </svg>
-      </button>
-    </div>
-    <!-- </div> -->
-
-    <!-- <div class="links-row__group"> -->
-    <a class="links-row__link" target="_blank" href="https://yandex.ru">
-      <div class="links-row__img">
-        <img class="" loading="lazy" src="./img/yandex.webp" alt="yandex" />
+  <body>
+    <div class="links-row">
+      <!-- <div class="links-row__group"> -->
+      <div class="fold-unfold">
+        <button class="btn-unfold">
+          <svg width="556" height="531" viewBox="0 0 556 531" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line
+              class="svg-line"
+              x1="56.5685"
+              y1="40"
+              x2="278"
+              y2="261.431"
+              stroke="black"
+              stroke-width="80"
+              stroke-linecap="round"
+            />
+            <line
+              class="svg-line"
+              x1="278"
+              y1="261.431"
+              x2="499.431"
+              y2="40"
+              stroke="black"
+              stroke-width="80"
+              stroke-linecap="round"
+            />
+            <line
+              class="svg-line"
+              x1="56.5685"
+              y1="253"
+              x2="278"
+              y2="474.431"
+              stroke="black"
+              stroke-width="80"
+              stroke-linecap="round"
+            />
+            <line
+              class="svg-line"
+              x1="278"
+              y1="474.431"
+              x2="499.431"
+              y2="253"
+              stroke="black"
+              stroke-width="80"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <button class="btn-fold">
+          <svg width="556" height="531" viewBox="0 0 556 531" xmlns="http://www.w3.org/2000/svg">
+            <line
+              class="svg-line"
+              x1="56.5685"
+              y1="40"
+              x2="278"
+              y2="261.431"
+              stroke="black"
+              stroke-width="80"
+              stroke-linecap="round"
+            />
+            <line
+              class="svg-line"
+              x1="278"
+              y1="261.431"
+              x2="499.431"
+              y2="40"
+              stroke="black"
+              stroke-width="80"
+              stroke-linecap="round"
+            />
+            <line
+              class="svg-line"
+              x1="56.5685"
+              y1="253"
+              x2="278"
+              y2="474.431"
+              stroke="black"
+              stroke-width="80"
+              stroke-linecap="round"
+            />
+            <line
+              class="svg-line"
+              x1="278"
+              y1="474.431"
+              x2="499.431"
+              y2="253"
+              stroke="black"
+              stroke-width="80"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
       </div>
-      <span>yandex</span>
-    </a>
+      <!-- </div> -->
 
-    <a class="links-row__link" target="_blank" href="https://translate.yandex.ru">
-      <div class="links-row__img">
-        <img class="" src="./img/yandex_translator.svg" alt="yandex translator" />
-      </div>
-      <span>translate.yandex</span>
-    </a>
-
-    <a class="links-row__link" target="_blank" href="https://www.google.com">
-      <div class="links-row__img">
-        <img src="./img/google.svg" alt="google" />
-      </div>
-      <span>google</span>
-    </a>
-
-    <a class="links-row__link" target="_blank" href="https://www.google.ru/maps">
-      <div class="links-row__img">
-        <img src="./img/map.svg" alt="map" />
-      </div>
-      <span>maps.google</span>
-    </a>
-
-    <a class="links-row__link" target="_blank" href="https://translate.google.ru/?hl=en&tab=TT">
-      <div class="links-row__img">
-        <img src="./img/google-translator.svg" alt="google translator" />
-      </div>
-      <span>translate.google</span>
-    </a>
-
-    <a class="links-row__link" target="_blank" href="https://www.youtube.com">
-      <div class="links-row__img">
-        <img src="./img/youtube.svg" alt="youtube" />
-      </div>
-      <span>youtube</span>
-    </a>
-    <!-- </div> -->
-  </div>
-
-  <section class="section-spoilers">
-    <div class="spoilers">
-      <div class="spoiler spoiler-orange">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">html &nbsp; css &nbsp; js &nbsp; php</div>
-          <div class="spoiler__body fold">
-            <span>html</span>
-            <a target="_blank" href="https://hcdev.ru/html/">справочник HTML</a>
-
-            <span>pug</span>
-            <a target="_blank" href="https://pugjs.org/api/getting-started.html">pug</a>
-            <a target="_blank" href="https://zaurmag.ru/html5-css3/html-preprotsessor-pug-jade.html">pug на русском</a>
-            <a target="_blank" href="https://html-to-pug.com">html-to-pug</a>
-            <a target="_blank" href="https://html2pug.com">html2pug</a>
-
-            <span>css</span>
-            <a target="_blank" href="https://hcdev.ru/css/">справочник CSS</a>
-
-            <span>sass</span>
-            <a target="_blank" href="https://sass-lang.su/documentation/">sass-lang.su</a>
-
-            <span>flex</span>
-            <a target="_blank" href="https://hcdev.ru/flex/">flex</a>
-
-            <span>grid</span>
-            <a target="_blank" href="https://hcdev.ru/grid/">grid</a>
-            <a target="_blank" href="https://grid.layoutit.com">grid generator</a>
-
-            <span>js</span>
-            <a target="_blank" href="https://basicweb.ru/javascript/js_web_api.php">справочник JS</a>
-            <a target="_blank" href="https://learn.javascript.ru">учебник JS</a>
-
-            <span>jQuery</span>
-            <a target="_blank" href="https://jquery.com">jquery.com</a>
-            <a target="_blank" href="https://jquery-docs.ru/">jquery-docs.ru</a>
-            <a target="_blank" href="https://basicweb.ru/" tooltip="jQuery селекторы, события, методы, перемещения, утилиты, эффекты">basicweb.ru</a>
-
-            <span>php</span>
-            <a target="_blank" href="https://code.mu/ru/php/manual/">справочник PHP</a>
-            <a target="_blank" href="https://www.php.net/manual/ru/langref.php">справочник языка</a>
-            <!--<a target="_blank" href="https://php.info-kna.ru">php как на ладони</a>-->
-          </div>
+      <!-- <div class="links-row__group"> -->
+      <a class="links-row__link" target="_blank" href="https://yandex.ru">
+        <div class="links-row__img">
+          <img class="" loading="lazy" src="./img/yandex.webp" alt="yandex" />
         </div>
-      </div>
+        <span>yandex</span>
+      </a>
 
-      <div class="spoiler spoiler-orange">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">справка</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://w3techs.com">w3techs.com</a>
-            <hr />
-            <a target="_blank" href="https://my-js.org">my-js.org</a>
-            <a target="_blank" href="https://htmlcheatsheet.com/js/">html css js jq</a>
-            <a target="_blank" href="https://easings.net/en#">easing functions</a>
-            <a target="_blank" href="https://simon.html5.org/dump/html5-canvas-cheat-sheet.html">canvas</a>
-            <a target="_blank" href="https://bootstrap-4.ru/articles/cheatsheet/">bootstrap</a>
-            <a target="_blank" href="https://devhints.io/react/">react</a>
-            <a target="_blank" href="https://gitsheet.wtf">git</a>
-            <a target="_blank" href="https://introcs.cs.princeton.edu/java/11cheatsheet/">java</a>
-            <a target="_blank" href="https://cheatography.com">5000 Cheat Sheets</a>
-            <a target="_blank" href="https://overapi.com">overapi.com</a>
-            <a target="_blank" href="https://publish.obsidian.md/help-ru/Начните+здесь">obsidian ru</a>
-
-
-            <span>js</span>
-            <a target="_blank" href="https://atuin.ru/blog/parallaks-effekty-s-bibliotekoj-parallax-js/">parallaxjs</a>
-          </div>
+      <a class="links-row__link" target="_blank" href="https://translate.yandex.ru">
+        <div class="links-row__img">
+          <img class="" src="./img/yandex_translator.svg" alt="yandex translator" />
         </div>
-      </div>
+        <span>translate.yandex</span>
+      </a>
 
-      <div class="spoiler spoiler-orange">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">библиотеки</div>
-          <div class="spoiler__body fold">
-            <span>css</span>
-            <a target="_blank" href="https://animate.style">animate</a>
-
-            <span>jq</span>
-            <a target="_blank" href="https://kenwheeler.github.io/slick/">slick</a>
-            <a target="_blank" href="https://masonry.desandro.com">masonry</a>
-            <a target="_blank" href="https://youmightnotneedjquery.com">youmightnotneedjquery</a>
-
-            <span>js</span>
-            <a target="_blank" href="https://swiperjs.com">swiperjs</a>
-            <a target="_blank" href="https://atuin.ru/blog/parallaks-effekty-s-bibliotekoj-parallax-js/">parallaxjs</a>
-            <a target="_blank" href="https://sweetalert2.github.io">sweetalert2</a>
-            <a target="_blank" href="https://nanogallery2.nanostudio.org">nanogallery2</a>
-            <a target="_blank" href="https://animxyz.com">animxyz.com</a>
-            <a target="_blank" href="https://momentjs.com" tooltip="для анализа, проверки, управления и форматирования дат и времени">momentjs.com</a>
-            <a target="_blank" href="https://day.js.org/ru/" tooltip="быстрая 2kB альтернатива moment.js с тем же современным api">day.js</a>
-            <a target="_blank" href="https://driverjs.com" tooltip="для создания тура по сайту">driverjs.com</a>
-          </div>
+      <a class="links-row__link" target="_blank" href="https://www.google.com">
+        <div class="links-row__img">
+          <img src="./img/google.svg" alt="google" />
         </div>
-      </div>
+        <span>google</span>
+      </a>
 
-      <div class="spoiler spoiler-orange">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">проверка</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect">PageSpeed Insights</a>
-            <a target="_blank" href="https://gtmetrix.com">gtmetrix.com</a>
-            <a target="_blank" href="https://validator.w3.org/#validate_by_input">W3C Validator</a>
-            <a target="_blank" href="https://caniuse.com">Can I Use</a>
-            <a target="_blank" href="https://caninclude.glitch.me">Can I Include</a>
-            <a target="_blank" href="https://www.hotlog.ru/global/browser">статистика</a>
-          </div>
+      <a class="links-row__link" target="_blank" href="https://www.google.ru/maps">
+        <div class="links-row__img">
+          <img src="./img/map.svg" alt="map" />
         </div>
-      </div>
+        <span>maps.google</span>
+      </a>
 
-      <div class="spoiler spoiler-orange">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">node &nbsp; npm &nbsp; gulp</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://nodejs.org/en/">nodejs.org</a>
-            <a target="_blank" href="https://nodejsdev.ru/guides/freecodecamp/">nodejsdev.ru/guides</a>
-            <a target="_blank" href="https://www.npmjs.com">npmjs.com</a>
-            <a target="_blank" href="https://gulpjs.com/plugins/">gulpjs.com/plugins</a>
-            <a target="_blank" href="https://webdesign-master.ru/blog/docs/gulp-documentation.html">gulp на русском</a>
-          </div>
+      <a class="links-row__link" target="_blank" href="https://translate.google.ru/?hl=en&tab=TT">
+        <div class="links-row__img">
+          <img src="./img/google-translator.svg" alt="google translator" />
         </div>
-      </div>
+        <span>translate.google</span>
+      </a>
 
-      <div class="spoiler spoiler-orange">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">server</div>
-          <div class="spoiler__body fold">
-            <span>.htaccess</span>
-            <a target="_blank" href="https://httpd.apache.org/docs/2.2/howto/htaccess.html">docs</a>
-            <a target="_blank" href="https://habr.com/en/company/click/blog/462029/">на русском</a>
-          </div>
+      <a class="links-row__link" target="_blank" href="https://www.youtube.com">
+        <div class="links-row__img">
+          <img src="./img/youtube.svg" alt="youtube" />
         </div>
-      </div>
-
-      <div class="spoiler spoiler-orange">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">english</div>
-          <div class="spoiler__body fold">
-            <span>переводчики</span>
-            <a target="_blank" href="https://www.grammarly.com">grammarly.com</a>
-            <a target="_blank" href="https://www.deepl.com/translator">deepl.com</a>
-            <a target="_blank" href="https://translate.yandex.ru">translate.yandex.ru</a>
-            <a target="_blank" href="https://context.reverso.net/translation/">context.reverso.net</a>
-            <a target="_blank" href="https://wordsfromtext.com/">wordsfromtext.com</a>
-
-            <span>проверка</span>
-            <a target="_blank" href="https://languagetool.org">languagetool.org</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-orange">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">data analyze</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://jsoneditoronline.org">jsoneditoronline.org</a>
-            <a target="_blank" href="https://ibox.tools/semantic-analysis">семант анализ текст</a>
-            <a target="_blank" href="https://jamstack.org">jamstack.org</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-orange">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">temp email</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://temp-mail.org">temp-mail.org</a>
-            <a target="_blank" href="https://trashmail.com/?lang=en">trashmail.com</a>
-            <a target="_blank" href="https://www.crazymailing.com">crazymailing.com</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-orange">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">me</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://codepen.io/your-work/">codepen.io</a>
-            <span>git</span>
-            <a target="_blank" href="https://github.com/falkov-sites/">github.com</a>
-            <a target="_blank" href="https://docs.github.com/ru">docs.github.com/ru</a>
-          </div>
-        </div>
-      </div>
+        <span>youtube</span>
+      </a>
+      <!-- </div> -->
     </div>
 
-    <div class="spoilers">
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">background</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://www.toptal.com/designers/subtlepatterns/">паттерн фон</a>
-            <a target="_blank" href="https://williamngan.github.io/kubist/">полигональный фон</a>
-            <a target="_blank" href="https://app.haikei.app" tooltip="генератор фонов из разных фигур и градиента">генератор фонов</a>
-            <a target="_blank" href="https://www.svgbackgrounds.com/tools/svg-to-css/">SVG to CSS background</a>
+    <section class="section-spoilers">
+      <div class="spoilers">
+        <div class="spoiler spoiler-orange">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">html &nbsp; css &nbsp; js &nbsp; php</div>
+            <div class="spoiler__body fold">
+              <span>html</span>
+              <a target="_blank" href="https://hcdev.ru/html/">справочник HTML</a>
+
+              <span>pug</span>
+              <a target="_blank" href="https://pugjs.org/api/getting-started.html">pug</a>
+              <a target="_blank" href="https://zaurmag.ru/html5-css3/html-preprotsessor-pug-jade.html"
+                >pug на русском</a
+              >
+              <a target="_blank" href="https://html-to-pug.com">html-to-pug</a>
+              <a target="_blank" href="https://html2pug.com">html2pug</a>
+
+              <span>css</span>
+              <a target="_blank" href="https://hcdev.ru/css/">справочник CSS</a>
+
+              <span>sass</span>
+              <a target="_blank" href="https://sass-lang.su/documentation/">sass-lang.su</a>
+
+              <span>flex</span>
+              <a target="_blank" href="https://hcdev.ru/flex/">flex</a>
+
+              <span>grid</span>
+              <a target="_blank" href="https://hcdev.ru/grid/">grid</a>
+              <a target="_blank" href="https://grid.layoutit.com">grid generator</a>
+
+              <span>js</span>
+              <a target="_blank" href="https://basicweb.ru/javascript/js_web_api.php">справочник JS</a>
+              <a target="_blank" href="https://learn.javascript.ru">учебник JS</a>
+
+              <span>jQuery</span>
+              <a target="_blank" href="https://jquery.com">jquery.com</a>
+              <a target="_blank" href="https://jquery-docs.ru/">jquery-docs.ru</a>
+              <a
+                target="_blank"
+                href="https://basicweb.ru/"
+                tooltip="jQuery селекторы, события, методы, перемещения, утилиты, эффекты"
+                >basicweb.ru</a
+              >
+
+              <span>php</span>
+              <a target="_blank" href="https://code.mu/ru/php/manual/">справочник PHP</a>
+              <a target="_blank" href="https://www.php.net/manual/ru/langref.php">справочник языка</a>
+              <!--<a target="_blank" href="https://php.info-kna.ru">php как на ладони</a>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-orange">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">справка</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://w3techs.com">w3techs.com</a>
+              <hr />
+              <a target="_blank" href="https://my-js.org">my-js.org</a>
+              <a target="_blank" href="https://htmlcheatsheet.com/js/">html css js jq</a>
+              <a target="_blank" href="https://easings.net/en#">easing functions</a>
+              <a target="_blank" href="https://simon.html5.org/dump/html5-canvas-cheat-sheet.html">canvas</a>
+              <a target="_blank" href="https://bootstrap-4.ru/articles/cheatsheet/">bootstrap</a>
+              <a target="_blank" href="https://devhints.io/react/">react</a>
+              <a target="_blank" href="https://gitsheet.wtf">git</a>
+              <a target="_blank" href="https://introcs.cs.princeton.edu/java/11cheatsheet/">java</a>
+              <a target="_blank" href="https://cheatography.com">5000 Cheat Sheets</a>
+              <a target="_blank" href="https://overapi.com">overapi.com</a>
+              <a target="_blank" href="https://publish.obsidian.md/help-ru/Начните+здесь">obsidian ru</a>
+
+              <span>js</span>
+              <a target="_blank" href="https://atuin.ru/blog/parallaks-effekty-s-bibliotekoj-parallax-js/"
+                >parallaxjs</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-orange">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">библиотеки</div>
+            <div class="spoiler__body fold">
+              <span>css</span>
+              <a target="_blank" href="https://animate.style">animate</a>
+
+              <span>jq</span>
+              <a target="_blank" href="https://kenwheeler.github.io/slick/">slick</a>
+              <a target="_blank" href="https://masonry.desandro.com">masonry</a>
+              <a target="_blank" href="https://youmightnotneedjquery.com">youmightnotneedjquery</a>
+
+              <span>js</span>
+              <a target="_blank" href="https://swiperjs.com">swiperjs</a>
+              <a target="_blank" href="https://atuin.ru/blog/parallaks-effekty-s-bibliotekoj-parallax-js/"
+                >parallaxjs</a
+              >
+              <a target="_blank" href="https://sweetalert2.github.io">sweetalert2</a>
+              <a target="_blank" href="https://nanogallery2.nanostudio.org">nanogallery2</a>
+              <a target="_blank" href="https://animxyz.com">animxyz.com</a>
+              <a
+                target="_blank"
+                href="https://momentjs.com"
+                tooltip="для анализа, проверки, управления и форматирования дат и времени"
+                >momentjs.com</a
+              >
+              <a
+                target="_blank"
+                href="https://day.js.org/ru/"
+                tooltip="быстрая 2kB альтернатива moment.js с тем же современным api"
+                >day.js</a
+              >
+              <a target="_blank" href="https://driverjs.com" tooltip="для создания тура по сайту">driverjs.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-orange">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">проверка</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect"
+                >PageSpeed Insights</a
+              >
+              <a target="_blank" href="https://gtmetrix.com">gtmetrix.com</a>
+              <a target="_blank" href="https://validator.w3.org/#validate_by_input">W3C Validator</a>
+              <a target="_blank" href="https://caniuse.com">Can I Use</a>
+              <a target="_blank" href="https://caninclude.glitch.me">Can I Include</a>
+              <a target="_blank" href="https://www.hotlog.ru/global/browser">статистика</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-orange">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">node &nbsp; npm &nbsp; gulp</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://nodejs.org/en/">nodejs.org</a>
+              <a target="_blank" href="https://nodejsdev.ru/guides/freecodecamp/">nodejsdev.ru/guides</a>
+              <a target="_blank" href="https://www.npmjs.com">npmjs.com</a>
+              <a target="_blank" href="https://gulpjs.com/plugins/">gulpjs.com/plugins</a>
+              <a target="_blank" href="https://webdesign-master.ru/blog/docs/gulp-documentation.html"
+                >gulp на русском</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-orange">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">server</div>
+            <div class="spoiler__body fold">
+              <span>.htaccess</span>
+              <a target="_blank" href="https://httpd.apache.org/docs/2.2/howto/htaccess.html">docs</a>
+              <a target="_blank" href="https://habr.com/en/company/click/blog/462029/">на русском</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-orange">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">english</div>
+            <div class="spoiler__body fold">
+              <span>переводчики</span>
+              <a target="_blank" href="https://www.grammarly.com">grammarly.com</a>
+              <a target="_blank" href="https://www.deepl.com/translator">deepl.com</a>
+              <a target="_blank" href="https://translate.yandex.ru">translate.yandex.ru</a>
+              <a target="_blank" href="https://context.reverso.net/translation/">context.reverso.net</a>
+              <a target="_blank" href="https://wordsfromtext.com/">wordsfromtext.com</a>
+
+              <span>проверка</span>
+              <a target="_blank" href="https://languagetool.org">languagetool.org</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-orange">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">data analyze</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://jsoneditoronline.org">jsoneditoronline.org</a>
+              <a target="_blank" href="https://ibox.tools/semantic-analysis">семант анализ текст</a>
+              <a target="_blank" href="https://jamstack.org">jamstack.org</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-orange">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">temp email</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://temp-mail.org">temp-mail.org</a>
+              <a target="_blank" href="https://trashmail.com/?lang=en">trashmail.com</a>
+              <a target="_blank" href="https://www.crazymailing.com">crazymailing.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-orange">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">me</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://codepen.io/your-work/">codepen.io</a>
+              <span>git</span>
+              <a target="_blank" href="https://github.com/falkov-sites/">github.com</a>
+              <a target="_blank" href="https://docs.github.com/ru">docs.github.com/ru</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">gradient</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://uigradients.com">генер градиентов</a>
-            <a target="_blank" href="https://cssgradient.io">cssgradient.io</a>
-            <a target="_blank" href="https://active-vision.ru/icon/gradient/">gradient</a>
+      <div class="spoilers">
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">background</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://www.toptal.com/designers/subtlepatterns/">паттерн фон</a>
+              <a target="_blank" href="https://williamngan.github.io/kubist/">полигональный фон</a>
+              <a target="_blank" href="https://app.haikei.app" tooltip="генератор фонов из разных фигур и градиента"
+                >генератор фонов</a
+              >
+              <a target="_blank" href="https://www.svgbackgrounds.com/tools/svg-to-css/">SVG to CSS background</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">gradient</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://uigradients.com">генер градиентов</a>
+              <a target="_blank" href="https://cssgradient.io">cssgradient.io</a>
+              <a target="_blank" href="https://active-vision.ru/icon/gradient/">gradient</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">logo</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://seeklogo.com">brands, logo templ</a>
+              <a target="_blank" href="https://toplogos.ru">лого компаний</a>
+              <a target="_blank" href="https://turbologo.ru">конструктор лого</a>
+              <a target="_blank" href="https://9elements.github.io/fancy-border-radius/">fancy-border-radius</a>
+              <a target="_blank" href="https://svgporn.com" tooltip="векторные логотипы">svgporn.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">icons, iconfont</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://icones.js.org">icones.js.org</a>
+              <a target="_blank" href="https://icons8.com">icons8.com</a>
+              <a target="_blank" href="https://www.flaticon.com">flaticon.com</a>
+              <a target="_blank" href="https://www.iconfinder.com/free_icons">iconfinder.com</a>
+              <a target="_blank" href="https://fontello.com">icon fonts generator</a>
+              <a target="_blank" href="https://unicode-table.com/ru/">символы Unicode</a>
+
+              <span>icon font</span>
+              <a target="_blank" href="https://icomoon.io">icomoon.io</a>
+              <a target="_blank" href="https://iconly.io/tools/svg-convert-stroke-to-fill"
+                >svg-convert-stroke-to-fill</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">color</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://colorscheme.ru/html-colors.html">colorscheme.ru</a>
+              <a
+                target="_blank"
+                href="https://tutsplus.github.io/how-to-manipulate-colors-in-javascript-using-chroma.js/"
+                >генер переход цвета</a
+              >
+              <a target="_blank" href="https://www.materialpalette.com">materialpalette.com</a>
+              <a target="_blank" href="https://lokeshdhakar.com/projects/color-thief/">палитра из фото</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">photo</div>
+            <div class="spoiler__body fold">
+              <span>поиск</span>
+              <a target="_blank" href="https://unsplash.com">unsplash.com</a>
+              <a target="_blank" href="https://pixabay.com">pixabay.com</a>
+              <a target="_blank" href="https://www.pinterest.com">pinterest.com</a>
+              <a target="_blank" href="https://www.foodiesfeed.com">foodiesfeed.com (еда)</a>
+
+              <span>сжатие</span>
+              <a target="_blank" href="https://tin.webp.com">tinypng.com</a>
+              <a target="_blank" href="https://squoosh.app">squoosh.app</a>
+              <a target="_blank" href="https://imagecompressor.com">imagecompressor.com</a>
+              <a target="_blank" href="https://shortpixel.com/online-image-compression">shortpixel.com</a>
+
+              <span>сервисы</span>
+              <a target="_blank" href="https://pfpmaker.com">фото профиля LinkedIn</a>
+              <a target="_blank" href="https://www.photofeeler.com/">оценка фото профиля</a>
+              <a target="_blank" href="https://www.remove.bg">remove.bg</a>
+              <a target="_blank" href="https://labs.tineye.com/multicolr/#colors=73a1d2,f6da46;weights=50,50;"
+                >фото по цвету</a
+              >
+              <a target="_blank" href="https://thispersondoesnotexist.com">persons doesn't exist</a>
+              <a
+                target="_blank"
+                href="https://picsum.photos"
+                tooltip="для вставки в код: href='https://picsum/photos/64'"
+                >picsum.photos</a
+              >
+
+              <span>placeholders</span>
+              <a target="_blank" href="https://loremflickr.com">image placeholder</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">картинки, svg</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://www.openpeeps.com">openpeeps.com</a>
+              <a target="_blank" href="https://www.humaaans.com">humaaans.com</a>
+              <a target="_blank" href="https://undraw.co">undraw.co</a>
+              <a target="_blank" href="https://opendoodles.com">opendoodles.com</a>
+              <a target="_blank" href="https://illlustrations.co">illlustrations.co</a>
+              <a target="_blank" href="https://icons8.com/illustrations">icons8.com/illustrations</a>
+              <a target="_blank" href="https://error404.fun">error404.fun</a>
+              <a target="_blank" href="https://iradesign.io">iradesign.io</a>
+              <a target="_blank" href="https://www.manypixels.co/gallery">manypixels.co</a>
+              <a target="_blank" href="https://interfacer.xyz">interfacer.xyz</a>
+              <a target="_blank" href="https://lukaszadam.com/illustrations">lukaszadam.com</a>
+              <a target="_blank" href="https://outlane.co/topics/freebie/">outlane.co</a>
+              <a target="_blank" href="https://www.vectorstock.com/free-vectors">vectorstock.com</a>
+              <a target="_blank" href="https://openclipart.org">openclipart.org</a>
+              <a target="_blank" href="https://www.123freevectors.com">123freevectors.com</a>
+              <a target="_blank" href="https://www.freevector.com/vector/computers">freevector.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">сервисы</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://openweathermap.org">openweathermap.org</a>
+              <a target="_blank" href="https://creativecloud.adobe.com/quick-actions/pattern/make">create pattern</a>
+              <a target="_blank" href="https://json-generator.com">json-generator.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">референсы</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://dribbble.com">dribbble.com</a>
+              <a target="_blank" href="https://www.behance.net/galleries/graphic-design">behance.net</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">logo</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://seeklogo.com">brands, logo templ</a>
-            <a target="_blank" href="https://toplogos.ru">лого компаний</a>
-            <a target="_blank" href="https://turbologo.ru">конструктор лого</a>
-            <a target="_blank" href="https://9elements.github.io/fancy-border-radius/">fancy-border-radius</a>
-            <a target="_blank" href="https://svgporn.com" tooltip="векторные логотипы">svgporn.com</a>
+      <div class="spoilers">
+        <div class="spoiler spoiler-green">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">fonts</div>
+            <div class="spoiler__body fold">
+              <span>поиск</span>
+              <a target="_blank" href="https://fonts.google.com">fonts.google.com</a>
+              <a target="_blank" href="https://webfonts.pro">webfonts.pro</a>
+              <a target="_blank" href="https://www.fontsquirrel.com">fontsquirrel.com</a>
+              <a target="_blank" href="https://bestfonts.pro">bestfonts.pro</a>
+              <a target="_blank" href="https://nomail.com.ua">nomail.com.ua</a>
+              <a target="_blank" href="https://www.1001freefonts.com">1001freefonts.com</a>
+
+              <span>конвертеры</span>
+              <a target="_blank" href="https://onlinefontconverter.com">onlinefontconverter</a>
+              <a target="_blank" href="https://transfonter.org">transfonter.org</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-green">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">svg</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://www.jenkov.com/tutorials/svg/index.html">jenkov.com/tutorials/svg/</a>
+              <a target="_blank" href="https://jakearchibald.github.io/svgomg/">оптимизация svg</a>
+              <a target="_blank" href="https://svgsprit.es">спрайт генератор</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-green">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">favicon</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://realfavicongenerator.net">realfavicongenerator</a>
+              <a target="_blank" href="https://www.favicon-generator.org">favicon-generator.org</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-green">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">text</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://fish-text.ru">fish-text.ru</a>
+              <a target="_blank" href="https://ru.lipsum.com">ru.lipsum.com</a>
+              <a target="_blank" href="https://www.artlebedev.ru/typograf/">typograf</a>
+              <a target="_blank" href="https://glvrd.ru">главред</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-green">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">animation</div>
+            <div class="spoiler__body fold">
+              <a
+                target="_blank"
+                href="https://svg-art.ru/?p=1783"
+                tooltip="Анимации с использованием stroke-dasharray и stroke-dashoffset"
+                >stroke-dasharray</a
+              >
+              <a target="_blank" href="https://textdrom.com/animation/animation-effects-text.html">анимац надпись</a>
+              <a target="_blank" href="https://animista.net">animista.net</a>
+
+              <span>cubic-bezier</span>
+              <a target="_blank" href="https://cubic-bezier.com/#.17,.67,.83,.76">cubic-bezier.com</a>
+              <a target="_blank" href="https://10015.io/tools/css-cubic-bezier-generator">cubic-bezier-generator</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-green">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">tool boxes</div>
+            <div class="spoiler__body fold">
+              <span>hover</span>
+              <a target="_blank" href="https://codepen.io/BastianAndre/pen/eBBvVz" tooltip="загнутый листочек"
+                >Lifted Paper Strips</a
+              >
+              <a target="_blank" href="https://tympanus.net/Development/HoverEffectIdeas/index2.html">hover на фото</a>
+
+              <span>clip-path</span>
+              <a target="_blank" href="https://bennettfeely.com/clippy/">CSS clip-path maker</a>
+              <a target="_blank" href="https://atuin.ru/tools/clip-path/">atuin.ru</a>
+
+              <span>shadow</span>
+              <a target="_blank" href="https://shadows.brumm.af">shadows.brumm.af</a>
+              <a target="_blank" href="https://active-vision.ru/icon/box-shadow/">box-shadow</a>
+
+              <span>-</span>
+              <a target="_blank" href="https://neumorphism.io">neumorphism</a>
+              <a
+                target="_blank"
+                href="https://10015.io/tools/css-glassmorphism-generator"
+                tooltip="Tools for Text, Image, CSS, Coding, Color, Social Media, QR Code, Barcode..."
+                >Tools In One Box</a
+              >
+              <a
+                target="_blank"
+                href="https://www.cssportal.com"
+                tooltip="CSS Tools, CSS Generator, CSS Resources, HTML Resources"
+                >cssportal.com</a
+              >
+              <a
+                target="_blank"
+                href="https://cssarrowplease.com"
+                tooltip="генерация блока со стрелкой (тултипа) на чистом CSS"
+                >cssarrowplease.com</a
+              >
+              <a
+                target="_blank"
+                href="https://proto.io/freebies/onoff/"
+                tooltip="CSS-Генератор кастомизируемых переключателей"
+                >proto.io/freebies/onoff/</a
+              >
+              <a target="_blank" href="http://callmecavs.com/bricks.js/" tooltip="Генератор masonry сеток"
+                >bricks.js/</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-green">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">-</div>
+            <div class="spoiler__body fold"></div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-green">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">разное</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://www.gifntext.com" tooltip="add text to gif">gifntext.com</a>
+              <a target="_blank" href="https://www.shapedivider.app" tooltip="Custom Shape Dividers"
+                >shapedivider.app</a
+              >
+              <a target="_blank" href="https://atuin.ru/blog/" tooltip="ссылки, кнопки, вкладки, секции, формы и т.д."
+                >разные элементы</a
+              >
+              <a target="_blank" href="https://marketplace.visualstudio.com/vscode">VSC extension</a>
+              <a
+                target="_blank"
+                href="https://habr.com/ru/company/htmlacademy/blog/579514/"
+                tooltip="35 инструментов веб-разработчика на каждый день"
+                >35 инструментов</a
+              >
+              <span>компьютерные комплектующие</span>
+              <a
+                target="_blank"
+                href="https://technical.city/ru"
+                tooltip="Сравнения, спецификации и рейтинги видеокарт и процессоров"
+                >technical.city - рейтинги</a
+              >
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">icons, iconfont</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://icones.js.org">icones.js.org</a>
-            <a target="_blank" href="https://icons8.com">icons8.com</a>
-            <a target="_blank" href="https://www.flaticon.com">flaticon.com</a>
-            <a target="_blank" href="https://www.iconfinder.com/free_icons">iconfinder.com</a>
-            <a target="_blank" href="https://fontello.com">icon fonts generator</a>
-            <a target="_blank" href="https://unicode-table.com/ru/">символы Unicode</a>
+      <div class="spoilers">
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">api</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://apilist.fun">apilist.fun</a>
+              <a target="_blank" href="https://mockapi.io/projects" tooltip="u:falkov  e:falkov.sites@gmail.com  p:**"
+                >mockapi.io</a
+              >
+              <a target="_blank" href="https://fakestoreapi.com">fakestoreapi.com</a>
+            </div>
+          </div>
+        </div>
 
-            <span>icon font</span>
-            <a target="_blank" href="https://icomoon.io">icomoon.io</a>
-            <a target="_blank" href="https://iconly.io/tools/svg-convert-stroke-to-fill">svg-convert-stroke-to-fill</a>
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">wp</div>
+            <div class="spoiler__body fold">
+              <span>&nbsp;</span>
+              <a target="_blank" href="https://wordpress.org">wordpress.org</a>
+              <a target="_blank" href="https://underscores.me">underscores.me</a>
+              <a target="_blank" href="https://www.mamp.info/en/mac/">mamp</a>
+              <span>&nbsp;</span>
+              <a target="_blank" href="https://wp-kama.ru">wp-kama.ru</a>
+              <a target="_blank" href="https://developer.wordpress.org">developer.wordpress.org</a>
+              <a target="_blank" href="https://wpinsideblog.com">wpinsideblog.com</a>
+              <a target="_blank" href="https://wpnull.org" tooltip="falkov@mail.ru **">wpnull.org</a>
+              <span>&nbsp;</span>
+              <a target="_blank" href="https://themeforest.net" title="это проба ">themeforest.net</a>
+              <span>&nbsp;gutenberg</span>
+              <a target="_blank" href="https://fullsiteediting.com">fullsiteediting.com</a>
+              <span>plugins</span>
+              <a target="_blank" href="https://www.advancedcustomfields.com">ACF</a>
+            </div>
+          </div>
+        </div>
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">react</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://react.dev/">react.dev</a>
+              <a target="_blank" href="https://ru.react.js.org">ru.react.js.org</a>
+              <a target="_blank" href="https://reactdev.ru">reactdev.ru</a>
+              <a target="_blank" href="https://reactrouter.com/en/main">reactrouter.com</a>
+              <a target="_blank" href="https://redux-toolkit.js.org">redux-toolkit.js.org</a>
+              <a target="_blank" href="https://runebook.dev/ru/docs/react/-index-">runebook.dev/ru</a>
+              <a target="_blank" href="https://codesandbox.io/s/react-new?utm_source=dotnew">codesandbox</a>
+              <a target="_blank" href="https://skeletonreact.com">skeletonreact.com</a>
+              <span>components</span>
+              <a target="_blank" href="https://react-icons.github.io/react-icons">react-icons</a>
+              <a target="_blank" href="https://react-hook-form.com">react-hook-form</a>
+              <a target="_blank" href="https://www.npmjs.com/package/react-phone-number-input">phone-number-input</a>
+              <span>ui</span>
+              <a target="_blank" href="https://mui.com/material-ui/">material-ui</a>
+              <a target="_blank" href="https://chakra-ui.com">chakra-ui.com</a>
+              <span>next</span>
+              <a target="_blank" href="https://nextjs.org">nextjs.org</a>
+            </div>
+          </div>
+        </div>
 
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">vue</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://vuejs.org">vuejs.org</a>
+              <a target="_blank" href="https://v3.ru.vuejs.org">v3.ru.vuejs.org</a>
+              <a target="_blank" href="https://pinia.vuejs.org">pinia.vuejs.org</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">nuxt</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://nuxt.com">nuxt.com</a>
+              <a target="_blank" href="https://vueuse.org">vueuse.org</a>
+              <a target="_blank" href="https://ui.nuxt.com">ui.nuxt.com</a>
+              <a target="_blank" href="https://www.shadcn-vue.com/docs/installation/nuxt.html">shadcn-vue</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spoiler spoiler-blue">
+          <div class="spoiler__item">
+            <div class="spoiler__title fold">tailwind</div>
+            <div class="spoiler__body fold">
+              <a target="_blank" href="https://tailwindcss.com/docs">tailwindcss.com/docs</a>
+              <a target="_blank" href="https://tailwindcss.ru">tailwindcss.ru</a>
+              <a target="_blank" href="https://www.nerdcave.com/tailwind-cheat-sheet">cheat sheet</a>
+              <a target="_blank" href="https://tailwindcomponents.com/cheatsheet/">cheat sheet</a>
+              <a target="_blank" href="https://runebook.dev/ru/docs/tailwindcss/-index-#Core_Concepts">core concepts</a>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">color</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://colorscheme.ru/html-colors.html">colorscheme.ru</a>
-            <a target="_blank" href="https://tutsplus.github.io/how-to-manipulate-colors-in-javascript-using-chroma.js/">генер переход цвета</a>
-            <a target="_blank" href="https://www.materialpalette.com">materialpalette.com</a>
-            <a target="_blank" href="https://lokeshdhakar.com/projects/color-thief/">палитра из фото</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">photo</div>
-          <div class="spoiler__body fold">
-            <span>поиск</span>
-            <a target="_blank" href="https://unsplash.com">unsplash.com</a>
-            <a target="_blank" href="https://pixabay.com">pixabay.com</a>
-            <a target="_blank" href="https://www.pinterest.com">pinterest.com</a>
-            <a target="_blank" href="https://www.foodiesfeed.com">foodiesfeed.com (еда)</a>
-
-            <span>сжатие</span>
-            <a target="_blank" href="https://tin.webp.com">tinypng.com</a>
-            <a target="_blank" href="https://squoosh.app">squoosh.app</a>
-            <a target="_blank" href="https://imagecompressor.com">imagecompressor.com</a>
-            <a target="_blank" href="https://shortpixel.com/online-image-compression">shortpixel.com</a>
-
-            <span>сервисы</span>
-            <a target="_blank" href="https://pfpmaker.com">фото профиля LinkedIn</a>
-            <a target="_blank" href="https://www.photofeeler.com/">оценка фото профиля</a>
-            <a target="_blank" href="https://www.remove.bg">remove.bg</a>
-            <a target="_blank" href="https://labs.tineye.com/multicolr/#colors=73a1d2,f6da46;weights=50,50;">фото по цвету</a>
-            <a target="_blank" href="https://thispersondoesnotexist.com">persons doesn't exist</a>
-            <a target="_blank" href="https://picsum.photos" tooltip="для вставки в код: href='https://picsum/photos/64'">picsum.photos</a>
-
-            <span>placeholders</span>
-            <a target="_blank" href="https://loremflickr.com">image placeholder</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">картинки, svg</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://www.openpeeps.com">openpeeps.com</a>
-            <a target="_blank" href="https://www.humaaans.com">humaaans.com</a>
-            <a target="_blank" href="https://undraw.co">undraw.co</a>
-            <a target="_blank" href="https://opendoodles.com">opendoodles.com</a>
-            <a target="_blank" href="https://illlustrations.co">illlustrations.co</a>
-            <a target="_blank" href="https://icons8.com/illustrations">icons8.com/illustrations</a>
-            <a target="_blank" href="https://error404.fun">error404.fun</a>
-            <a target="_blank" href="https://iradesign.io">iradesign.io</a>
-            <a target="_blank" href="https://www.manypixels.co/gallery">manypixels.co</a>
-            <a target="_blank" href="https://interfacer.xyz">interfacer.xyz</a>
-            <a target="_blank" href="https://lukaszadam.com/illustrations">lukaszadam.com</a>
-            <a target="_blank" href="https://outlane.co/topics/freebie/">outlane.co</a>
-            <a target="_blank" href="https://www.vectorstock.com/free-vectors">vectorstock.com</a>
-            <a target="_blank" href="https://openclipart.org">openclipart.org</a>
-            <a target="_blank" href="https://www.123freevectors.com">123freevectors.com</a>
-            <a target="_blank" href="https://www.freevector.com/vector/computers">freevector.com</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">сервисы</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://openweathermap.org">openweathermap.org</a>
-            <a target="_blank" href="https://creativecloud.adobe.com/quick-actions/pattern/make">create pattern</a>
-            <a target="_blank" href="https://json-generator.com">json-generator.com</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">референсы</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://dribbble.com">dribbble.com</a>
-            <a target="_blank" href="https://www.behance.net/galleries/graphic-design">behance.net</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="spoilers">
-      <div class="spoiler spoiler-green">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">fonts</div>
-          <div class="spoiler__body fold">
-            <span>поиск</span>
-            <a target="_blank" href="https://fonts.google.com">fonts.google.com</a>
-            <a target="_blank" href="https://webfonts.pro">webfonts.pro</a>
-            <a target="_blank" href="https://www.fontsquirrel.com">fontsquirrel.com</a>
-            <a target="_blank" href="https://bestfonts.pro">bestfonts.pro</a>
-            <a target="_blank" href="https://nomail.com.ua">nomail.com.ua</a>
-            <a target="_blank" href="https://www.1001freefonts.com">1001freefonts.com</a>
-
-            <span>конвертеры</span>
-            <a target="_blank" href="https://onlinefontconverter.com">onlinefontconverter</a>
-            <a target="_blank" href="https://transfonter.org">transfonter.org</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-green">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">svg</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://www.jenkov.com/tutorials/svg/index.html">jenkov.com/tutorials/svg/</a>
-            <a target="_blank" href="https://jakearchibald.github.io/svgomg/">оптимизация svg</a>
-            <a target="_blank" href="https://svgsprit.es">спрайт генератор</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-green">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">favicon</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://realfavicongenerator.net">realfavicongenerator</a>
-            <a target="_blank" href="https://www.favicon-generator.org">favicon-generator.org</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-green">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">text</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://fish-text.ru">fish-text.ru</a>
-            <a target="_blank" href="https://ru.lipsum.com">ru.lipsum.com</a>
-            <a target="_blank" href="https://www.artlebedev.ru/typograf/">typograf</a>
-            <a target="_blank" href="https://glvrd.ru">главред</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-green">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">animation</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://svg-art.ru/?p=1783" tooltip="Анимации с использованием stroke-dasharray и stroke-dashoffset">stroke-dasharray</a>
-            <a target="_blank" href="https://textdrom.com/animation/animation-effects-text.html">анимац надпись</a>
-            <a target="_blank" href="https://animista.net">animista.net</a>
-
-            <span>cubic-bezier</span>
-            <a target="_blank" href="https://cubic-bezier.com/#.17,.67,.83,.76">cubic-bezier.com</a>
-            <a target="_blank" href="https://10015.io/tools/css-cubic-bezier-generator">cubic-bezier-generator</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-green">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">tool boxes</div>
-          <div class="spoiler__body fold">
-
-            <span>hover</span>
-            <a target="_blank" href="https://codepen.io/BastianAndre/pen/eBBvVz" tooltip="загнутый листочек">Lifted Paper Strips</a>
-            <a target="_blank" href="https://tympanus.net/Development/HoverEffectIdeas/index2.html">hover на фото</a>
-
-            <span>clip-path</span>
-            <a target="_blank" href="https://bennettfeely.com/clippy/">CSS clip-path maker</a>
-            <a target="_blank" href="https://atuin.ru/tools/clip-path/">atuin.ru</a>
-
-            <span>shadow</span>
-            <a target="_blank" href="https://shadows.brumm.af">shadows.brumm.af</a>
-            <a target="_blank" href="https://active-vision.ru/icon/box-shadow/">box-shadow</a>
-
-            <span>-</span>
-            <a target="_blank" href="https://neumorphism.io">neumorphism</a>
-            <a target="_blank" href="https://10015.io/tools/css-glassmorphism-generator" tooltip="Tools for Text, Image, CSS, Coding, Color, Social Media, QR Code, Barcode...">Tools In One Box</a>
-            <a target="_blank" href="https://www.cssportal.com" tooltip="CSS Tools, CSS Generator, CSS Resources, HTML Resources">cssportal.com</a>
-            <a target="_blank" href="https://cssarrowplease.com" tooltip="генерация блока со стрелкой (тултипа) на чистом CSS">cssarrowplease.com</a>
-            <a target="_blank" href="https://proto.io/freebies/onoff/" tooltip="CSS-Генератор кастомизируемых переключателей">proto.io/freebies/onoff/</a>
-            <a target="_blank" href="http://callmecavs.com/bricks.js/" tooltip="Генератор masonry сеток">bricks.js/</a>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-green">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">-</div>
-          <div class="spoiler__body fold">
-
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-green">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">разное</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://www.gifntext.com" tooltip="add text to gif">gifntext.com</a>
-            <a target="_blank" href="https://www.shapedivider.app" tooltip="Custom Shape Dividers">shapedivider.app</a>
-            <a target="_blank" href="https://atuin.ru/blog/" tooltip="ссылки, кнопки, вкладки, секции, формы и т.д.">разные элементы</a>
-            <a target="_blank" href="https://marketplace.visualstudio.com/vscode">VSC extension</a>
-            <a target="_blank" href="https://habr.com/ru/company/htmlacademy/blog/579514/" tooltip="35 инструментов веб-разработчика на каждый день">35 инструментов</a>
-            <span>компьютерные комплектующие</span>
-            <a target="_blank" href="https://technical.city/ru" tooltip="Сравнения, спецификации и рейтинги видеокарт и процессоров">technical.city - рейтинги</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="spoilers">
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">api</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://apilist.fun">apilist.fun</a>
-            <a target="_blank" href="https://mockapi.io/projects" tooltip="u:falkov  e:falkov.sites@gmail.com  p:**">mockapi.io</a>
-            <a target="_blank" href="https://fakestoreapi.com">fakestoreapi.com</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">wp</div>
-          <div class="spoiler__body fold">
-            <span>&nbsp;</span>
-            <a target="_blank" href="https://wordpress.org">wordpress.org</a>
-            <a target="_blank" href="https://underscores.me">underscores.me</a>
-            <a target="_blank" href="https://www.mamp.info/en/mac/">mamp</a>
-            <span>&nbsp;</span>
-            <a target="_blank" href="https://wp-kama.ru">wp-kama.ru</a>
-            <a target="_blank" href="https://developer.wordpress.org">developer.wordpress.org</a>
-            <a target="_blank" href="https://wpinsideblog.com">wpinsideblog.com</a>
-            <a target="_blank" href="https://wpnull.org" tooltip="falkov@mail.ru **">wpnull.org</a>
-            <span>&nbsp;</span>
-            <a target="_blank" href="https://themeforest.net" title="это проба ">themeforest.net</a>
-            <span>&nbsp;gutenberg</span>
-            <a target="_blank" href="https://fullsiteediting.com">fullsiteediting.com</a>
-            <span>plugins</span>
-            <a target="_blank" href="https://www.advancedcustomfields.com">ACF</a>
-          </div>
-        </div>
-      </div>
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">react</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://react.dev/">react.dev</a>
-            <a target="_blank" href="https://ru.react.js.org">ru.react.js.org</a>
-            <a target="_blank" href="https://reactdev.ru">reactdev.ru</a>
-            <a target="_blank" href="https://reactrouter.com/en/main">reactrouter.com</a>
-            <a target="_blank" href="https://redux-toolkit.js.org">redux-toolkit.js.org</a>
-            <a target="_blank" href="https://runebook.dev/ru/docs/react/-index-">runebook.dev/ru</a>
-            <a target="_blank" href="https://codesandbox.io/s/react-new?utm_source=dotnew">codesandbox</a>
-            <a target="_blank" href="https://skeletonreact.com">skeletonreact.com</a>
-            <span>components</span>
-            <a target="_blank" href="https://react-icons.github.io/react-icons">react-icons</a>
-            <a target="_blank" href="https://react-hook-form.com">react-hook-form</a>
-            <a target="_blank" href="https://www.npmjs.com/package/react-phone-number-input">phone-number-input</a>
-            <span>ui</span>
-            <a target="_blank" href="https://mui.com/material-ui/">material-ui</a>
-            <a target="_blank" href="https://chakra-ui.com">chakra-ui.com</a>
-            <span>next</span>
-            <a target="_blank" href="https://nextjs.org">nextjs.org</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">vue</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://vuejs.org">vuejs.org</a>
-            <a target="_blank" href="https://v3.ru.vuejs.org">v3.ru.vuejs.org</a>
-            <a target="_blank" href="https://pinia.vuejs.org">pinia.vuejs.org</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">nuxt</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://nuxt.com">nuxt.com</a>
-            <a target="_blank" href="https://vueuse.org">vueuse.org</a>
-            <a target="_blank" href="https://ui.nuxt.com">ui.nuxt.com</a>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="spoiler spoiler-blue">
-        <div class="spoiler__item">
-          <div class="spoiler__title fold">tailwind</div>
-          <div class="spoiler__body fold">
-            <a target="_blank" href="https://tailwindcss.com/docs">tailwindcss.com/docs</a>
-            <a target="_blank" href="https://tailwindcss.ru">tailwindcss.ru</a>
-            <a target="_blank" href="https://www.nerdcave.com/tailwind-cheat-sheet">cheat sheet</a>
-            <a target="_blank" href="https://tailwindcomponents.com/cheatsheet/">cheat sheet</a>
-            <a target="_blank" href="https://runebook.dev/ru/docs/tailwindcss/-index-#Core_Concepts">core concepts</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <div id="tooltip"></div>
-</body>
-
+    <div id="tooltip"></div>
+  </body>
 </html>
