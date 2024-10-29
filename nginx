@@ -1,0 +1,102 @@
+----------------------- nginx for nextjs: ------------------------
+# domain or subdomain: webnotes.falkov.website
+
+# 1. create domain(subdomain) folder:
+sudo mkdir -p /var/www/webnotes.falkov.website
+
+# 2. дать себе права на эту папку:
+sudo chown -R $USER:$USER /var/www/webnotes.falkov.website
+
+# 3. create configuration file:
+sudo nano /etc/nginx/sites-available/webnotes.falkov.website
+
+# 4. configuration file content (ctrl/o, enter, ctrl/x):
+server {
+  listen 80;
+  server_name webnotes.falkov.website www.webnotes.falkov.website;
+
+  location / {
+    proxy_pass http://localhost:3000;  # если несколько сайтов, порт изменить
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+}
+
+# 5. activate configuration file:
+sudo ln -s /etc/nginx/sites-available/webnotes.falkov.website /etc/nginx/sites-enabled/
+
+# 6. check configuration and reload nginx:
+sudo nginx -t
+sudo nginx -s reload
+sudo systemctl restart nginx  # или так
+
+# 7. go to the domain(subdomain) folder:
+cd /var/www/webnotes.falkov.website
+
+# 8. клонировать репо, установить, собрать и запустить:
+git clone https://github.com/falkov-sites/webnotes.git .
+npm install
+npm run build
+npm start
+
+# переход в папки:
+cd /var/www/webnotes.falkov.website
+cd /etc/nginx/sites-available/webnotes.falkov.website
+------------------------------------------------------------------
+
+
+----------------------- nginx for nextjs: ------------------------
+# domain or subdomain: webnotes.falkov.website
+
+# 1. create domain(subdomain) folder:
+sudo mkdir -p /var/www/webnotes.falkov.website
+
+# 2. дать себе права на эту папку:
+sudo chown -R $USER:$USER /var/www/webnotes.falkov.website
+
+# 3. create configuration file:
+sudo nano /etc/nginx/sites-available/webnotes.falkov.website
+
+# 4. configuration file content (ctrl/o, enter, ctrl/x):
+server {
+  listen 80;
+  server_name webnotes.falkov.website www.webnotes.falkov.website;
+
+  location / {
+    proxy_pass http://localhost:3000;  # если несколько сайтов, порт изменить
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+}
+
+# 5. activate configuration file:
+sudo ln -s /etc/nginx/sites-available/webnotes.falkov.website /etc/nginx/sites-enabled/
+
+# 6. check configuration and reload nginx:
+sudo nginx -t
+sudo nginx -s reload
+sudo systemctl restart nginx  # или так
+
+# 7. go to the domain(subdomain) folder:
+cd /var/www/webnotes.falkov.website
+
+# 8. клонировать репо (u:falkov):
+git clone https://github.com/falkov-sites/webnotes.git .  # здесь репо
+# PAT (Personal Access Token) вместо пароля: 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
+git clone https://github.com/falkov-sites/webnotes.git?access_token=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 .
+
+# 9. установить, собрать и запустить:
+npm install
+npm run build
+npm start
+
+# справочно переход в папки:
+cd /var/www/webnotes.falkov.website
+cd /etc/nginx/sites-available/webnotes.falkov.website
+------------------------------------------------------------------
