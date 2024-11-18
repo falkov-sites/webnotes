@@ -866,7 +866,12 @@
         "href": "https://zippystarter.com/tools/shadcn-ui-theme-generator",
         "text": "zippystarter.com",
         "tooltip": "light, dark"
-      }
+      },
+      { "subtitle": "shadcn extensions" },
+      { "href": "https://originui.com", "text": "originui.com" },
+      { "href": "https://shadcnui-expansions.typeart.cc", "text": "typeart extension" },
+      { "href": "https://shadcn-extension.vercel.app", "text": "vercel extension" },
+      { "href": "https://enhanced-button.vercel.app", "text": "vercel button extension" }
     ]
   },
 
